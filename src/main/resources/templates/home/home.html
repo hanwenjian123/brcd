@@ -94,7 +94,7 @@
     </script>
     <style type="text/css">
         iframe {
-            min-height: 1200px !important;
+            min-height: 50px !important;
         }
 
         .vip_alert {
@@ -200,7 +200,6 @@
                 </a>
                 <img th:src="@{/image-resources/logo-admin.png}" style="margin-top: 20px">
             </div>
-
             <div id="" style="float:right;margin-right:10px;">
                 <div class="user-account-btn dropdown">
                     <a href="data-tables.html#" title="My Account" class="user-profile clearfix" data-toggle="dropdown">
@@ -225,7 +224,13 @@
                                         修改密码
                                     </a>
                                 </li>
-
+                                <li>
+                                    <a href="../user/updateFtpPwd.html" th:href="@{'/toUpdateFtpPwd'}"
+                                       target="mainFrame">
+                                        <i class="glyph-icon float-right icon-caret-right"></i>
+                                        修改FTP密码
+                                    </a>
+                                </li>
                             </ul>
                             <div class="pad5A button-pane button-pane-alt text-center">
                                 <a href="/a/logout" th:href="@{AgentExit}"
@@ -246,28 +251,6 @@
                     <input type="hidden" id="selectMenu"/>
                     <li class="header"><span>代理商管理</span></li>
                     <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
                         <a href="#" title="代理商管理">
                             <i class="glyph-icon icon-cog" style="color:#cc0001;"></i>
                             <span>代理商管理</span>
@@ -275,13 +258,13 @@
                         <div class="sidebar-submenu" pid="4be70e41a232454ebd120c94e1f0b50b">
                             <ul>
                                 <li class="leaf " pid="b8d6153f760d4de3b59883c84ff92e98">
-                                    <a style="padding-left:30px;" href="../menu/agent/agentInfo.html" title="代理商信息"
+                                    <a style="padding-left:30px;" href="../brcd/agent/getAgent" title="代理商信息"
                                        target="mainFrame">
                                         <i class="glyph-icon icon-circle-arrow-right" style="color:#cc0001;"></i>
                                         <span>代理商信息</span></a>
                                 </li>
                                 <li class="leaf " pid="b8d6153f760d4de3b59883c84ff92e98">
-                                    <a style="padding-left:30px;" href="../menu/agent/adddailishang.html    "
+                                    <a style="padding-left:30px;" href="../brcd/agent/initToken"
                                        title="代理商信息" target="mainFrame">
                                         <i class="glyph-icon icon-circle-arrow-right" style="color:#cc0001;"></i>
                                         <span>添加代理商</span></a>
@@ -289,36 +272,9 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
+
                     <!-- .sidebar-submenu -->
                     <li class="header"><span>商户管理</span></li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
                     <li>
                         <a href="#" title="商户进件">
                             <i class="glyph-icon icon-book" style="color:#cc0001;"></i>
@@ -339,44 +295,21 @@
                         </div>
                     </li>
                     <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
                         <a href="#" title="商户管理">
                             <i class="glyph-icon icon-cog" style="color:#cc0001;"></i>
                             <span>商户管理</span>
                         </a>
+                        <!-添加代理-->
                         <div class="sidebar-submenu" pid="144c98b73d0c4e15b0d764f3bcbdd889">
                             <ul>
+                                <!--  <li class="leaf " pid="b968aea48b9e49a7aed21f16281a039f">
+                                      <a style="padding-left:30px;" th:href="@{/businessUser/query(affiliationAgent=${session.agentLogin.agentNumber})}" href="../menu/commercial/shanghuchaxun.html"
+                                         title="商户查询" target="mainFrame">
+                                          <i class="glyph-icon icon-reorder" style="color:#cc0001;"></i>
+                                          <span>商户查询</span></a>
+                                  </li>-->
                                 <li class="leaf " pid="b968aea48b9e49a7aed21f16281a039f">
-                                    <a style="padding-left:30px;" th:href="@{/businessUser/query}" href="../menu/commercial/shanghuchaxun.html"
-                                       title="商户查询" target="mainFrame">
-                                        <i class="glyph-icon icon-reorder" style="color:#cc0001;"></i>
-                                        <span>商户查询</span></a>
-                                </li>
-                                <li class="leaf " pid="b968aea48b9e49a7aed21f16281a039f">
-                                    <a style="padding-left:30px;"  href="../menu/commercial/shanghuxinxifguanli.html" th:href="@{/businessUser/toManage}"
+                                    <a style="padding-left:30px;"  href="../menu/commercial/shanghuxinxifguanli.html" th:href="@{/businessUser/query(affiliationAgent=${session.agentLogin.agentNumber})}"
                                        title="商户信息管理" target="mainFrame">
                                         <i class="glyph-icon icon-cog" style="color:#cc0001;"></i>
                                         <span>商户信息管理</span></a>
@@ -384,28 +317,10 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
+
                     <!-- .sidebar-submenu -->
                     <li class="header"><span>交易管理</span></li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
+
                     <li>
                         <a href="#" title="交易管理">
                             <i class="glyph-icon icon-reorder" style="color:#cc0001;"></i>
@@ -415,11 +330,13 @@
                             <ul>
                                 <li class="leaf " pid="fd429879c802494d875abc27375bfea2">
                                     <a style="padding-left:30px;" href="../menu/jiaoyiguanli/jiaoyijilu.html"
+                                       th:href="@{a/operate/order/list}"
                                        title="交易记录" target="mainFrame">
                                         <i class="glyph-icon icon-list-ol" style="color:#cc0001;"></i>
                                         <span>交易记录</span></a>
                                 </li>
                                 <a style="padding-left:30px;" href="../menu/jiaoyiguanli/fenrunjilu.html" title="分润记录"
+                                   th:href="@{profit/findProfitListToPage}"
                                    target="mainFrame">
                                     <i class="glyph-icon icon-th-large" style="color:#cc0001;"></i>
                                     <span>分润记录</span></a>
@@ -427,20 +344,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
+
                     <li>
                         <a href="#" title="结算管理">
                             <i class="glyph-icon icon-credit-card" style="color:#cc0001;"></i>
@@ -450,21 +354,13 @@
                             <ul>
 
                                 <li class="leaf " pid="6ab2ae156be04cfea17484c2f8647e91">
-                                    <a style="padding-left:30px;" href="../menu/jiesuanguanli/jiesuanjilu.html" th:href="@{/pageIndex}"
+                                    <a style="padding-left:30px;" href="../menu/jiesuanguanli/jiesuanjilu.html" th:href="@{settle/selectTbSettleList}"
                                        title="结算记录" target="mainFrame">
                                         <i class="glyph-icon icon-align-justify" style="color:#cc0001;"></i>
                                         <span>结算记录</span></a>
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
                     </li>
                     <li>
                         <a href="#" title="对账管理">
@@ -483,16 +379,6 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
                     <!-- .sidebar-submenu -->
                 </ul>
                 <!-- #sidebar-menu -->
@@ -500,11 +386,10 @@
         </div>
         <div id="page-content-wrapper">
             <div id="page-content">
-                <div class="container">
+                <div>
                     <iframe id="mainFrame" name="mainFrame" src="main.html" th:src="@{main.html}"
                             style="overflow:visible;" scrolling="yes"
-                            frameborder="no" height="100%" width="100%"></iframe>
-
+                            frameborder="no" height="80%" width="100%"></iframe>
                 </div>
             </div>
         </div>

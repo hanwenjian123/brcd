@@ -2,6 +2,7 @@ package com.brcd.bean;
 
 
 import lombok.Data;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 
@@ -31,11 +32,11 @@ public class TbBusinessUser {
 
     private String manageAddress;
 
-    private String manageProvince;
+    private Integer manageProvince;
 
-    private String manageCity;
+    private Integer manageCity;
 
-    private String manageDistrict;
+    private Integer manageDistrict;
 
     private String businessLicenseNo;
 
@@ -55,24 +56,37 @@ public class TbBusinessUser {
 
     private String registerLicensePicture;
 
-
+    private String password;
 
     private Integer businessUserStatus;
+
     private Date startTime;
+
     private Date endTime;
+
     private String businessUserKey;
-    private Integer businessId;
+
     private  TbAgent tbAgent;
-    private Integer bankId;
-
-
-    private TbBankcardInfo tbBankcardInfo;
 
     private  TbBusiness tbBusiness;
 
-    
+    private TbBankcardInfo tbBankcardInfo;
 
-    
+    private volatile MultipartFile identityCardFrontImg;
+
+    private volatile MultipartFile identityCardReverseImg;
+
+    private volatile MultipartFile identityCardHandImg;
+
+    private volatile MultipartFile bankCardFrontImg;
+
+    private volatile MultipartFile businessLicensePictureImg;
+
+    private volatile MultipartFile doorPictureImg;
+
+    private volatile MultipartFile registerLicensePictureImg;
+
+
 
 
 

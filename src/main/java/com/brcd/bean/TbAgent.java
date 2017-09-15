@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.io.Serializable;
 
 import javax.validation.constraints.Pattern;
 
@@ -12,7 +13,7 @@ import javax.validation.constraints.Pattern;
 使用lombok
  */
 @Data
-public class TbAgent {
+public class TbAgent implements Serializable{
 
     private  Long id;
 
@@ -95,9 +96,9 @@ public class TbAgent {
 
     private String mobilePhone;//手机号
 
-    private String remark;
+    private String remark;  //备注
 
 
-   private Integer wOrAilpay;
+    private Integer wOrAlipay; //微信或支付宝
 
 }
